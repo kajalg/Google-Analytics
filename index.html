@@ -1,0 +1,67 @@
+<html>
+	<head>
+		<title>Reports!</title>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-136309683-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-136309683-1');
+</script>
+
+	</head>
+	<link href="css/style.css" rel = "stylesheet" type = "text/css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		// Check if the localStorage object exists
+		if(localStorage){
+			$(document).ready(function(){
+				$(".submit").click(function(){
+					// Get input name
+					var sname = $("#sname").val();
+					var sid = $("#sid").val();
+					
+					// Store data
+					localStorage.setItem("s_id",sid);
+					sessionStorage.setItem("s_name", sname);
+					alert("student name is saved.");
+				});
+				$(".add").click(function(){
+					// Retrieve data
+					alert("Hi, " + localStorage.getItem("s_id") + " " + sessionStorage.getItem("s_name"));
+				});
+			});
+		} else{
+			alert("Sorry, your browser do not support local storage.");
+		}
+	</script>
+
+	<body>
+		<!--div class = "form">
+			<label>Stud Id :</label>
+			<input type = "text" name = "sid" id = "sid" required>
+			<label>Stud Name :</label>
+			<input type = "text" name = "sname" id = "sname">
+			<label>Subject 1 :</label>
+			<input type = "text" name = "m1">
+			<label>Subject 2 :</label>
+			<input type = "text" name = "m2">
+			<label>Subject 3 :</label>
+			<input type = "text" name = "m3">
+			<button type = "button" class = "submit">Submit</button>
+			<button type = "button" class = "reset">Reset</button>
+			<button type = "button" class = "add">Add</button>
+		</div-->
+		
+		<h1>Integrate Google Analytics in your website</h1>
+		
+		<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQVCVDdyQUf0-B7IN8fWzdZ1zX4nii_IA8Y7HqiOZBnWMf4s8E2P1BKFX1R9eqWG_lyzWOKFxESYroB/pubchart?oid=1006419368&amp;format=interactive"></iframe>
+		
+		
+		
+		<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQVCVDdyQUf0-B7IN8fWzdZ1zX4nii_IA8Y7HqiOZBnWMf4s8E2P1BKFX1R9eqWG_lyzWOKFxESYroB/pubchart?oid=1725353806&amp;format=interactive"></iframe>
+		
+	</body>
+</html>
